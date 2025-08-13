@@ -1,23 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 import imgBack from "../../../src/images/mailz.jpeg";
 import load1 from "../../../src/images/load2.gif";
 import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
-//import ScrollService from "../../utilities/scrollService";
-//import Animations from "../../utilities/Animations";
+import ScrollService from "../../utilities/scrollService";
+import Animations from "../../utilities/Animations";
 import Footer from "../../Components/Footer/Footer";
 
 import "./ContactMe.css";
 
 export default function ContactMe(props) {
-  // let fadeInScreenHandler = (screen) => {
-  //   if (screen.fadeInScreen !== props.id) return;
-  //   Animations.animations.fadeInScreen(props.id);
-  // };
 
-  // const fadeInSubscription =
-  //   ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
+   useEffect( () => {
+      let fadeInScreenHandler = (screen) => {
+    if (screen.fadeInScreen !== props.id) return;
+     Animations.animations.fadeInScreen(props.id);
+   };
+     const fadeInSubscription = ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
+      return () => {fadeInSubscription.unsubscribe();};
+   }, [props.id])
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
