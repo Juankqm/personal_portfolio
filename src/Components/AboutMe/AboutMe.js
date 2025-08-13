@@ -2,13 +2,13 @@
 import "./AboutMe.css";
 import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
 import ScrollService from "../../utilities/scrollService";
-import Animations from "../../utilities/Animations";
+//import Animations from "../../utilities/Animations";
 
 const AboutMe = (props) => {
-  let fadeInScreenHandler = (screen) => {
-    if (screen.fadeInScreen !== props.id) return;
-    Animations.animations.fadeInScreen(props.id);
-  };
+  // let fadeInScreenHandler = (screen) => {
+  //   if (screen.fadeInScreen !== props.id) return;
+  //   Animations.animations.fadeInScreen(props.id);
+  // };
   // const fadeInSubscription =
   //   ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
 

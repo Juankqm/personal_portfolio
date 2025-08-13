@@ -4,20 +4,20 @@ import { toast } from "react-toastify";
 import imgBack from "../../../src/images/mailz.jpeg";
 import load1 from "../../../src/images/load2.gif";
 import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
-import ScrollService from "../../utilities/scrollService";
-import Animations from "../../utilities/Animations";
+//import ScrollService from "../../utilities/scrollService";
+//import Animations from "../../utilities/Animations";
 import Footer from "../../Components/Footer/Footer";
 
 import "./ContactMe.css";
 
 export default function ContactMe(props) {
-  let fadeInScreenHandler = (screen) => {
-    if (screen.fadeInScreen !== props.id) return;
-    Animations.animations.fadeInScreen(props.id);
-  };
+  // let fadeInScreenHandler = (screen) => {
+  //   if (screen.fadeInScreen !== props.id) return;
+  //   Animations.animations.fadeInScreen(props.id);
+  // };
 
-  const fadeInSubscription =
-    ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
+  // const fadeInSubscription =
+  //   ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -71,20 +71,17 @@ export default function ContactMe(props) {
           <h2 className="title">
             Get In Touch 📧
           </h2>{" "}
-          <a href="#">
+          <a href="https://www.linkedin.com/in/juan-quir%C3%B3s-202344158/">
                 <i className="fa fa-linkedin-square"></i>
               </a>
-              <a href="#">
+              <a href="https://github.com/Juankqm">
                 <i className="fa fa-github-square"></i>
-              </a>
-              <a href="#">
-                <i className="fa fa-instagram"></i>
               </a>
         </div>
         <div className="back-form">
           <div className="img-back">
             <h4>Send Your Email Here!</h4>
-            <img src={imgBack} alt="image not found" />
+            <img src={imgBack} alt="Not found" />
           </div>
           <form onSubmit={submitForm}>
             <p>{banner}</p>
