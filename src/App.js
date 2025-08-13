@@ -1,6 +1,7 @@
 import './App.css';
 import PortfolioContainer from './Components/PortfolioContainer';
 import { ToastContainer} from 'react-toastify';
+
 import 'react-toastify/dist/ReactToastify.css';
 
 function App() {

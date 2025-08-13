@@ -8,18 +8,19 @@ import ScrollService from "../../utilities/scrollService";
 import Animations from "../../utilities/Animations";
 import Footer from "../../Components/Footer/Footer";
 
+
 import "./ContactMe.css";
 
 export default function ContactMe(props) {
 
-   useEffect( () => {
-      let fadeInScreenHandler = (screen) => {
-    if (screen.fadeInScreen !== props.id) return;
-     Animations.animations.fadeInScreen(props.id);
-   };
-     const fadeInSubscription = ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
-      return () => {fadeInSubscription.unsubscribe();};
-   }, [props.id])
+  useEffect(() => {
+    let fadeInScreenHandler = (screen) => {
+      if (screen.fadeInScreen !== props.id) return;
+      Animations.animations.fadeInScreen(props.id);
+    };
+    const fadeInSubscription = ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
+    return () => { fadeInSubscription.unsubscribe(); };
+  }, [props.id])
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -73,12 +74,15 @@ export default function ContactMe(props) {
           <h2 className="title">
             Get In Touch 📧
           </h2>{" "}
-          <a href="https://www.linkedin.com/in/juan-quir%C3%B3s-202344158/">
-                <i className="fa fa-linkedin-square"></i>
-              </a>
-              <a href="https://github.com/Juankqm">
-                <i className="fa fa-github-square"></i>
-              </a>
+          <a href="https://www.linkedin.com/in/juan-quir%C3%B3s-202344158/" target="blank">
+            <i className="fa fa-linkedin-square"></i>
+          </a>
+          <a href="https://github.com/Juankqm" target="blank">
+            <i className="fa fa-github-square"></i>
+          </a>
+          <a href="https://wa.me/50687915836?text=Hola%20Juan,%20vi%20tu%20portafolio" target="blank"> 
+            <i className="fa fa-whatsapp" aria-hidden="true"></i>
+          </a>
         </div>
         <div className="back-form">
           <div className="img-back">
@@ -97,9 +101,9 @@ export default function ContactMe(props) {
             <textarea type="text" onChange={handleMessage} value={message} />
 
             <div className="send-btn">
-              <button type="submit">
-                send
-                <i className="fa fa-paper-plane" />
+              <button type="submit" >
+                Send
+                <i className="fa fa-paper-plane pl-2" />
                 {bool ? (
                   <b className="load">
                     <img src={load1} alt="not internet connection" />
@@ -112,7 +116,7 @@ export default function ContactMe(props) {
           </form>
         </div>
       </div>
-       <Footer /> 
+      <Footer />
     </div>
   );
 }

@@ -131,7 +131,7 @@
     color: #fff;
   }
   .col i:hover {
-    transform: scale(1.5);
+    transform: scale(2);
   }
   
   @media screen and (min-width: 940px) {

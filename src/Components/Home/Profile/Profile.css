@@ -68,11 +68,11 @@
 }
 .colz .colz-icon i{
     color: white;
-    padding: 8px;
-    padding-left: 0px;
+    padding: 15px;
+   
 }
 .colz .colz-icon i:hover{
-    transform: scale(1.5);
+    transform: scale(2);
 }
 /* Tablet View */
 @media screen and (max-width: 1110px){
