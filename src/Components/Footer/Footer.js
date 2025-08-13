@@ -1,8 +1,8 @@
 import React from "react";
 import "./Footer.css";
 import ScrollService from "../../utilities/scrollService";
-
 import WaveBackground from '../../assets/Home/shape-bg.png'
+
 export default function Footer() {
   return (
     <>
@@ -14,7 +14,7 @@ export default function Footer() {
       </div>
         <div className='footer-parent-img'>
           &nbsp; 
-{/* <img src= {WaveBackground} alt='no internet connection'></img>  */}
+<img src= {WaveBackground} alt='no internet connection'></img>  
         </div>
     </>
 

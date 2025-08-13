@@ -2,7 +2,6 @@ import Home from '../Components/Home/Home'
 import AboutMe from '../Components/AboutMe/AboutMe'
 import Resume from '../Components/Resume/Resume'
 import ContactMe from '../Components/ContactMe/ContactMe';
-import Footer from '../Components/Footer/Footer';
 
 export const TOTAL_SCREENS =  [
     {

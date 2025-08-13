@@ -113,7 +113,7 @@ export default function ContactMe(props) {
           </form>
         </div>
       </div>
-      {/* <Footer /> */}
+       <Footer /> 
     </div>
   );
 }
